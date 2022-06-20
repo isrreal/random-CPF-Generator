@@ -1,18 +1,18 @@
 #include <iostream>
-void gerar(int** jooj) {
+void gerar(int** elementos) {
     for (int i = 0; i < 5; i++)
         for (int j = 0; j < 4; j++) {
             if(j != 3)
-                jooj[i][j] = rand() % 1000;
+                elementos[i][j] = rand() % 1000;
             else
-                jooj[i][j] = rand() % 100;
+                elementos[i][j] = rand() % 100;
         }
 }
 
-void printar(int** jooj) {
+void printar(int** elementos) {
     for (int i = 0; i < 5; i++){
         for (int j = 0; j < 4; j++ )
-            j != 3 ? std::cout << jooj[i][j] << "." : std::cout << jooj[i][j];
+            j != 3 ? std::cout << elementos[i][j] << "." : std::cout << elementos[i][j];
         std::cout << std::endl;
     }    
 }
